@@ -1,6 +1,9 @@
-#Bonjour
+#MON ETAB V1.3
+
 
 Afin d'executer notre programme, il vous suffit de taper
+    
+    pip install -r requirements.txt
 
     python main.py
 
