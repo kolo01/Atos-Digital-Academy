@@ -23,7 +23,9 @@ class Main :
                 break
             else:
                 print("Identifiants incorrects!")
-        Menu.MenuPrincipal(isConnected)
+        Menu.MenuPrincipal(isConnected=isConnected ) 
+
+        
     
 if __name__ == "__main__":
     monApp= Main
