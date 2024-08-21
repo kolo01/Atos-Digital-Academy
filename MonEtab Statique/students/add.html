@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajouter un élève</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 font-sans antialiased">
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-gray-800 text-white flex flex-col justify-between">
+        <div class="p-6">
+          <h2 class="text-3xl font-semibold text-center mb-8">Mon Etab</h2>
+          <nav>
+            <ul>
+              <li class="mb-4">
+                <a
+                  href="/home.html"
+                  class="hover:text-gray-400 flex items-center"
+                >
+                  <span class="mr-2">🏠</span> Tableau de bord
+                </a>
+              </li>
+              <li class="mb-4">
+                <a
+                  href="/students/index.html"
+                  class="hover:text-gray-400 flex items-center"
+                >
+                  <span class="mr-2">👥</span> Élèves
+                </a>
+              </li>
+              <li class="mb-4">
+                <a
+                  href="/teachers"
+                  class="text-blue-400 hover:text-blue-500 flex items-center font-medium"
+                >
+                  <span class="mr-2">👩‍🏫</span> Professeurs
+                </a>
+              </li>
+              <li class="mb-4">
+                <a href="/users" class="hover:text-gray-400 flex items-center">
+                  <span class="mr-2">👤</span> Utilisateurs
+                </a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:text-gray-400 flex items-center">
+                  <span class="mr-2">📊</span> Rapport
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="p-6">
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white flex items-center justify-center"
+          >
+            <span class="mr-2">🔓</span> Déconnexion
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="flex-1 p-6">
+        <a
+          href="#"
+          class="text-gray-500 hover:text-gray-700 flex items-center mb-6"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+          Retour
+        </a>
+        <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+          <h1 class="text-2xl font-semibold mb-6 text-center">
+            Ajouter un élève
+          </h1>
+          <form action="#" method="POST" class="grid grid-cols-2 gap-6">
+            <!-- Champ Nom -->
+            <div>
+              <label for="nom" class="block text-sm font-medium text-gray-700"
+                >Nom</label
+              >
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </div>
+            <!-- Champ Prénom -->
+            <div>
+              <label
+                for="prenom"
+                class="block text-sm font-medium text-gray-700"
+                >Prénom</label
+              >
+              <input
+                type="text"
+                id="prenom"
+                name="prenom"
+                class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </div>
+            <!-- Champ Genre -->
+            <div class="col-span-2">
+              <label class="block text-sm font-medium text-gray-700"
+                >Genre</label
+              >
+              <div class="mt-1 flex items-center">
+                <input
+                  type="radio"
+                  id="homme"
+                  name="genre"
+                  value="homme"
+                  class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
+                />
+                <label
+                  for="homme"
+                  class="ml-3 block text-sm font-medium text-gray-700"
+                  >Homme</label
+                >
+                <input
+                  type="radio"
+                  id="femme"
+                  name="genre"
+                  value="femme"
+                  class="ml-6 h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
+                />
+                <label
+                  for="femme"
+                  class="ml-3 block text-sm font-medium text-gray-700"
+                  >Femme</label
+                >
+              </div>
+            </div>
+            <!-- Champ Matricule -->
+            <div>
+              <label
+                for="matricule"
+                class="block text-sm font-medium text-gray-700"
+                >Matricule</label
+              >
+              <input
+                type="text"
+                id="matricule"
+                name="matricule"
+                class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </div>
+            <!-- Champ Date de Naissance -->
+            <div>
+              <label
+                for="date_naissance"
+                class="block text-sm font-medium text-gray-700"
+                >Date de naissance</label
+              >
+              <input
+                type="date"
+                id="date_naissance"
+                name="date_naissance"
+                class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </div>
+            <!-- Champ Classe -->
+            <div>
+              <label
+                for="classe"
+                class="block text-sm font-medium text-gray-700"
+                >Classe</label
+              >
+              <select
+                id="classe"
+                name="classe"
+                class="mt-1 block w-full p-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              >
+                <option value="Tle">Tle</option>
+                <option value="1ère">1ère</option>
+                <option value="2nd">2nd</option>
+                <option value="3ème">3ème</option>
+                <option value="4ème">4ème</option>
+                <option value="5ème">5ème</option>
+                <option value="6ème">6ème</option>
+              </select>
+            </div>
+            <!-- Champ Téléphone -->
+            <div>
+              <label
+                for="telephone"
+                class="block text-sm font-medium text-gray-700"
+                >Téléphone</label
+              >
+              <input
+                type="text"
+                id="telephone"
+                name="telephone"
+                class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </div>
+            <!-- Champ Ville -->
+            <div>
+              <label for="ville" class="block text-sm font-medium text-gray-700"
+                >Ville</label
+              >
+              <input
+                type="text"
+                id="ville"
+                name="ville"
+                class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </div>
+            <!-- Boutons -->
+            <div class="col-span-2 flex justify-center space-x-4">
+              <button
+                type="reset"
+                class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+              >
+                Annuler
+              </button>
+              <button
+                type="submit"
+                class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+              >
+                Enregistrer
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

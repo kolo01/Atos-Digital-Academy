@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modifier le professeur</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 font-sans antialiased">
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-gray-800 text-white flex flex-col justify-between">
+        <div class="p-6">
+          <h2 class="text-3xl font-semibold text-center mb-8">Mon Etab</h2>
+          <nav>
+            <ul>
+              <li class="mb-4">
+                <a
+                  href="/home.html"
+                  class="hover:text-gray-400 flex items-center"
+                >
+                  <span class="mr-2">🏠</span> Tableau de bord
+                </a>
+              </li>
+              <li class="mb-4">
+                <a
+                  href="/students/index.html"
+                  class="hover:text-gray-400 flex items-center"
+                >
+                  <span class="mr-2">👥</span> Élèves
+                </a>
+              </li>
+              <li class="mb-4">
+                <a
+                  href="/teachers"
+                  class="text-blue-400 hover:text-blue-500 flex items-center font-medium"
+                >
+                  <span class="mr-2">👩‍🏫</span> Professeurs
+                </a>
+              </li>
+              <li class="mb-4">
+                <a href="/users" class="hover:text-gray-400 flex items-center">
+                  <span class="mr-2">👤</span> Utilisateurs
+                </a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:text-gray-400 flex items-center">
+                  <span class="mr-2">📊</span> Rapport
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="p-6">
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white flex items-center justify-center"
+          >
+            <span class="mr-2">🔓</span> Déconnexion
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="flex-1 p-6">
+        <a
+          href="#"
+          class="text-gray-500 hover:text-gray-700 flex items-center mb-6"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+          Retour
+        </a>
+        <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+          <h1 class="text-2xl font-semibold mb-6 text-center">Rapport</h1>
+          <form action="#" method="POST" class="grid grid-cols-2 gap-6">
+            <!-- Champ Option -->
+            <div class="flex items-center space-x-4">
+              <!-- Label -->
+              <label
+                for="option"
+                class="block text-sm font-medium text-gray-700"
+              >
+                Sélectionnez une option
+              </label>
+
+              <!-- Sélecteur -->
+              <select
+                id="matiere"
+                name="matiere"
+                class="p-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              >
+                <option value="Tle" selected>Liste des élèves</option>
+                <option value="1ère">Liste des Professeurs</option>
+                <option value="2nd">Liste des utilisateurs</option>
+              </select>
+
+              <!-- Boutons -->
+              <button
+                type="submit"
+                class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded w-80"
+              >
+                Générer un format PDF
+              </button>
+              <button
+                type="submit"
+                class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded w-80"
+              >
+                Générer un format Excel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

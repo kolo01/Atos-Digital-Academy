@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajouter un Utilisateur</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 font-sans antialiased">
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-gray-800 text-white flex flex-col justify-between">
+        <div class="p-6">
+          <h2 class="text-3xl font-semibold text-center mb-8">Mon Etab</h2>
+          <nav>
+            <ul>
+              <li class="mb-4">
+                <a
+                  href="/home.html"
+                  class="hover:text-gray-400 flex items-center"
+                >
+                  <span class="mr-2">🏠</span> Tableau de bord
+                </a>
+              </li>
+              <li class="mb-4">
+                <a
+                  href="/students/index.html"
+                  class="hover:text-gray-400 flex items-center"
+                >
+                  <span class="mr-2">👥</span> Élèves
+                </a>
+              </li>
+              <li class="mb-4">
+                <a
+                  href="/teachers"
+                  class="text-blue-400 hover:text-blue-500 flex items-center font-medium"
+                >
+                  <span class="mr-2">👩‍🏫</span> Professeurs
+                </a>
+              </li>
+              <li class="mb-4">
+                <a href="/users" class="hover:text-gray-400 flex items-center">
+                  <span class="mr-2">👤</span> Utilisateurs
+                </a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:text-gray-400 flex items-center">
+                  <span class="mr-2">📊</span> Rapport
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="p-6">
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white flex items-center justify-center"
+          >
+            <span class="mr-2">🔓</span> Déconnexion
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="flex-1 flex items-center justify-center p-6">
+        <div class="max-w-md w-full bg-white p-8 rounded-lg shadow-lg">
+          <h1 class="text-2xl font-semibold mb-6 text-center">
+            Ajouter un utilisateur
+          </h1>
+          <form action="#" method="POST" class="grid grid-cols-1 gap-6">
+            <!-- Champ pseudo -->
+            <div>
+              <label
+                for="pseudo"
+                class="block text-sm font-medium text-gray-700"
+                >Pseudo</label
+              >
+              <input
+                type="text"
+                id="pseudo"
+                name="pseudo"
+                class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </div>
+            <!-- Mot de passe -->
+            <div>
+              <label
+                for="motdepasse"
+                class="block text-sm font-medium text-gray-700"
+                >Mot de passe</label
+              >
+              <input
+                type="password"
+                id="motdepasse"
+                name="motdepasse"
+                class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </div>
+            <!-- Confirmer mot de passe -->
+            <div>
+              <label
+                for="confirmermotdepasse"
+                class="block text-sm font-medium text-gray-700"
+                >Confirmer mot de passe</label
+              >
+              <input
+                type="password"
+                id="confirmermotdepasse"
+                name="confirmermotdepasse"
+                class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </div>
+            <!-- Boutons -->
+            <div class="flex justify-center space-x-4">
+              <button
+                type="reset"
+                class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+              >
+                Annuler
+              </button>
+              <button
+                type="submit"
+                class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+              >
+                Enregistrer
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
