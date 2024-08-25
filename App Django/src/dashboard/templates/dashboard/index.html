@@ -1,0 +1,116 @@
+{% extends "./base.html" %} {% load static %} {% block title %}Mon Etab -
+Tableau de Bord{% endblock title %} {% block content %}
+<script
+  type="text/javascript"
+  src="{% static 'js/dashboard.js' %}"
+  defer
+></script>
+<div class="flex min-h-screen">
+  <!-- Sidebar -->
+  <aside class="flex flex-col justify-between w-64 text-white bg-gray-800">
+    <div class="p-6">
+      <div class="flex items-center justify-center mb-8">
+        <img src="{% static "images/logo.png" %}" alt="logo du site"
+        width="50px" height="50px" class="mr-3" />
+        <h2 class="text-3xl font-semibold">Mon Etab</h2>
+      </div>
+
+      <nav>
+        <ul>
+          <li class="mb-4">
+            <a
+              href="{% url 'dashboard:index' %}"
+              class="flex items-center font-medium text-blue-400 hover:text-gray-400"
+            >
+              <span class="mr-2">🏠</span> Tableau de bord
+            </a>
+          </li>
+          <li class="mb-4">
+            <a
+              href="{% url 'student:index' %}"
+              class="flex items-center hover:text-gray-400"
+            >
+              <span class="mr-2">👥</span> Élèves
+            </a>
+          </li>
+          <li class="mb-4">
+            <a
+              href="{% url 'teacher:index' %}"
+              class="flex items-center hover:text-blue-500"
+            >
+              <span class="mr-2">👩‍🏫</span> Professeurs
+            </a>
+          </li>
+          <li class="mb-4">
+            <a
+              href="{% url 'users:index' %}"
+              class="flex items-center hover:text-gray-400"
+            >
+              <span class="mr-2">👤</span> Utilisateurs
+            </a>
+          </li>
+          <li class="mb-4">
+            <a
+              href="{% url 'rapport:index' %}"
+              class="flex items-center hover:text-gray-400"
+            >
+              <span class="mr-2">📊</span> Rapport
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="p-6">
+      <a
+        href="#"
+        class="flex items-center justify-center text-gray-400 hover:text-white"
+      >
+        <span class="mr-2">🔓</span> Déconnexion
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="flex-1 p-6">
+    <h1 class="mb-6 text-2xl font-semibold">Tableau de bord</h1>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <!-- Stat Box 1 -->
+      <div class="p-6 bg-white rounded-lg shadow">
+        <h3 class="mb-4 text-lg font-bold text-black">Nombre d'élève</h3>
+        <p class="p-20 text-4xl font-bold text-center">128 100</p>
+      </div>
+      <!-- Stat Box 2 -->
+      <div class="p-6 bg-white rounded-lg shadow">
+        <h3 class="mb-4 text-lg font-bold text-black">Nombre de professeur</h3>
+        <p class="p-20 text-4xl font-bold text-center">128 100</p>
+      </div>
+      <!-- Stat Box 3 -->
+      <div class="p-6 bg-white rounded-lg shadow">
+        <h3 class="mb-4 text-lg font-bold text-black">Nombre d'utilisateur</h3>
+        <p class="p-20 text-4xl font-bold text-center">128 100</p>
+      </div>
+      <!-- Stat Box 4 (Pie Chart) -->
+      <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">
+        <h3 class="mb-4 text-lg font-bold text-left text-black">
+          Élève par genre
+        </h3>
+        <div class="relative w-full h-64">
+          <canvas id="pieChart"></canvas>
+        </div>
+        <div class="mt-4">
+          <ul class="grid grid-cols-2 gap-2">
+            <li class="flex items-center mb-2">
+              <span class="inline-block w-4 h-4 mr-2 bg-blue-500"></span>
+              Homme
+            </li>
+            <li class="flex items-center mb-2">
+              <span class="inline-block w-4 h-4 mr-2 bg-red-500"></span>
+              Femme
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

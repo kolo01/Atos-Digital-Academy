@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Modifier le professeur</title>
+      <link
+         href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+         rel="stylesheet"
+      />
+   </head>
+   <body class="font-sans antialiased bg-gray-100">
+      <div class="flex min-h-screen">
+         <!-- Sidebar -->
+         <aside
+            class="flex flex-col justify-between w-64 text-white bg-gray-800"
+         >
+            <div class="p-6">
+               <div class="flex items-center justify-center mb-8">
+                  <img src="{% static "images/logo.png" %}" alt="logo du site"
+                  width="50px" height="50px" class="mr-3" />
+                  <h2 class="text-3xl font-semibold">Mon Etab</h2>
+               </div>
+
+               <nav>
+                  <ul>
+                     <li class="mb-4">
+                        <a
+                           href="{% url 'dashboard:index' %}"
+                           class="flex items-center hover:text-gray-400"
+                        >
+                           <span class="mr-2">🏠</span> Tableau de bord
+                        </a>
+                     </li>
+                     <li class="mb-4">
+                        <a
+                           href="{% url 'student:index' %}"
+                           class="flex items-center hover:text-gray-400"
+                        >
+                           <span class="mr-2">👥</span> Élèves
+                        </a>
+                     </li>
+                     <li class="mb-4">
+                        <a
+                           href=" {% url 'teacher:index' %}"
+                           class="flex items-center hover:text-gray-400"
+                        >
+                           <span class="mr-2">👩‍🏫</span> Professeurs
+                        </a>
+                     </li>
+                     <li class="mb-4">
+                        <a
+                           href="{% url 'users:index' %}"
+                           class="flex items-center hover:text-gray-400"
+                        >
+                           <span class="mr-2">👤</span> Utilisateurs
+                        </a>
+                     </li>
+                     <li class="mb-4">
+                        <a
+                           href="{% url 'rapport:index' %}"
+                           class="flex items-center font-medium text-blue-400 hover:text-gray-400"
+                        >
+                           <span class="mr-2">📊</span> Rapport
+                        </a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="p-6">
+               <a
+                  href="#"
+                  class="flex items-center justify-center text-gray-400 hover:text-white"
+               >
+                  <span class="mr-2">🔓</span> Déconnexion
+               </a>
+            </div>
+         </aside>
+
+         <!-- Main Content -->
+         <div class="flex-1 p-6">
+            <a
+               href="{% url 'rapport:index' %}"
+               class="flex items-center mb-6 text-gray-500 hover:text-gray-700"
+            >
+               <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+               >
+                  <path
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     stroke-width="2"
+                     d="M15 19l-7-7 7-7"
+                  />
+               </svg>
+               Retour
+            </a>
+            <div class="max-w-full p-8 mx-auto bg-white rounded-lg shadow-lg">
+               <h1 class="mb-6 text-2xl font-semibold text-center">Rapport</h1>
+               <form action="#" method="POST" class="grid grid-cols-2 gap-6">
+                  <!-- Champ Option -->
+                  <div class="flex items-center space-x-4">
+                     <!-- Label -->
+                     <label
+                        for="option"
+                        class="block text-sm font-medium text-gray-700"
+                     >
+                        Sélectionnez une option
+                     </label>
+
+                     <!-- Sélecteur -->
+                     <select
+                        id="matiere"
+                        name="matiere"
+                        class="p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                     >
+                        <option value="Tle" selected>Liste des élèves</option>
+                        <option value="1ère">Liste des Professeurs</option>
+                        <option value="2nd">Liste des utilisateurs</option>
+                     </select>
+
+                     <!-- Boutons -->
+
+                     <button
+                        width="100px"
+                        type="submit"
+                        class="px-4 py-2 font-bold text-white transition duration-150 bg-red-500 rounded hover:bg-red-600"
+                     >
+                        Générer un format PDF
+                     </button>
+                     <button
+                        width="100px"
+                        type="submit"
+                        class="px-4 py-2 font-bold text-white transition duration-150 bg-green-500 rounded hover:bg-green-600"
+                     >
+                        Générer un format Excel
+                     </button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

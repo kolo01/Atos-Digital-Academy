@@ -1,0 +1,36 @@
+{% extends "./base.html" %} {% load static %} {% block title %}Page de
+connexion{%endblock %} {% block content %}
+<div class="flex flex-wrap justify-center bg-black h-screen w-screen">
+  <div class="w-1/3 h-fit-content m-auto rounded-2xl p-4 bg-gray-200">
+    <div class="w-full flex my-20">
+      <img
+        class="ms-40"
+        src="{% static  'images/logo.png' %}"
+        alt="logo du site"
+        width="100px"
+        height="100px"
+      />
+      <h1 class="text-center mt-5 text-6xl font-bold">Mon Etab</h1>
+    </div>
+    <div class="text-center text-xl font-bold grid w-full mx-auto">
+      <input
+        class="w-[90%] mx-auto p-2 border-4 border-solid border-black placeholder:bold placeholder:text-black"
+        type="text"
+        class="form-control"
+        placeholder="Identifiant"
+      />
+      <input
+        class="w-[90%] mx-auto p-2 mt-5 border-4 border-solid border-black placeholder:bold placeholder:text-black"
+        type="password"
+        class="form-control mt-4"
+        placeholder="Mot de passe"
+      />
+      <button
+        class="w-[90%] mx-auto shadow-2xl shadow-black my-10 bg-blue-500 text-white font-bold hover:bg-blue-700 p-4"
+      >
+        <a href="home">Connexion</a>
+      </button>
+    </div>
+  </div>
+</div>
+{% endblock %}

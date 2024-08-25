@@ -1,0 +1,68 @@
+{% extends "./base.html" %} {% load static %} {% block title %}Ajouter un
+Utilisateur{% endblock title %} {% block content %}
+<!-- Main Content -->
+<div class="flex-1 flex items-center justify-center p-6">
+  <div class="max-w-md w-full bg-white p-8 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-semibold mb-6 text-center">
+      Modifier un utilisateur -45678
+    </h1>
+    <form action="#" method="POST" class="grid grid-cols-1 gap-6">
+      <!-- Champ pseudo -->
+      <div>
+        <input
+          placeholder="Pseudo"
+          type="text"
+          id="pseudo"
+          name="pseudo"
+          class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        />
+      </div>
+      <!-- Ancien Mot de passe -->
+      <div>
+        <input
+          placeholder="Ancien mot de passe"
+          type="password"
+          id="ancienmotdepasse"
+          name="ancienmotdepasse"
+          class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        />
+      </div>
+      <!-- Nouveau Mot de passe -->
+      <div>
+        <input
+          placeholder="Nouveau mot de passe"
+          type="password"
+          id="motdepasse"
+          name="motdepasse"
+          class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        />
+      </div>
+      <!-- Confirmer mot de passe -->
+      <div>
+        <input
+          placeholder="Confirmer mot de passe"
+          type="password"
+          id="confirmermotdepasse"
+          name="confirmermotdepasse"
+          class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        />
+      </div>
+      <!-- Boutons -->
+      <div class="flex justify-center space-x-4">
+        <button
+          type="reset"
+          class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+        >
+          Annuler
+        </button>
+        <button
+          type="submit"
+          class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+        >
+          Enregistrer
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock content %}
